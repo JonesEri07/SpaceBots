@@ -93,6 +93,11 @@ html, body {
   background-image: url("/images/level3.png");
 }
 
+.squaremain .create {
+  background-image: url("/images/levelblank.png");
+  
+}
+
 .button {
   position: relative;
   background-color: #4CAF50; /* Green */

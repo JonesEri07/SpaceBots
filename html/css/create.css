@@ -1,0 +1,18 @@
+
+
+.button2 {
+  background-color: white;
+  position: relative;
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  cursor: pointer;
+  border-radius: 8px;
+  width: 50%;
+
+}

@@ -1,20 +1,51 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
 <link href='https://fonts.googleapis.com/css?family=Bungee Shade' rel='stylesheet'>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-<link rel="stylesheet" href="/css/styles.css" />
-<link rel="stylesheet" href="/css/layout.css" />
-<title>Template</title>
+  <link rel="stylesheet" href="/css/styles.css" />
+  <link rel="stylesheet" href="/css/layout.css" />
+  <link rel="stylesheet" href="/css/create.css" />
+  <title>Space Bots Contact</title>
 </head>
+
 <body class="hg">
   <header class="hg__header">
-    <h1 align="center"><a href="/index.html">Space Bots!</a></h1>
-    <h1 align="center">Level #</h1>
+
+    <div class="header" align="center">
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="/index.html">SB</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="/index.html">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/pages/levels.html">Levels</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/pages/leaderboard.html">Leaderboard</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="/pages/create.html">Create</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/pages/contact.html">Contact</a>
+        </li>
+      </ul>
+    </div>
+    </nav>
+    </div>
+
+    <h1 align="center">Space Bots!</h1>
+    <h1 align="center">Create</h1>
   </header>
 
   <main class="hg__main">
@@ -41,51 +72,37 @@
 
 
 
-<aside class="hg__left">
-  <span class="score_item">Number of Moves: 0</span>
-  <div><button class="button" type="button">Restart</button></div>
-  <!-- <span class="score_item" style="display: inline;">0</span> -->
+<aside class="hg__left" style='background-image: url("/images/buildingblocks.png"); background-size: contain; background-repeat: no-repeat;'>
+
 
   </aside>
   <aside class="hg__right">
-    <div class="right_container">
+    <textarea rows="10">
+      Create a level of your own! Just drag and drop the elements onto the board.
+      Then erase this message and give a detailed solution to your creation.
+      Only submissions with a valid solution will be included in considered designs
+      to be added to the website with your name!
+      After writing your solution just click send.
+      </textarea>
+      <button class="button2" type="button" onclick="alert('Creation Sent!')" style="background-color: gray; height: auto;">Send</button>
 
-    <button id="redbutton"></button>
-    <button id="bluebutton"></button>
-    <button id="greenbutton"></button>
-    <button id="yellowbutton"></button>
-
-
-
-  <div>
-    <button id="leftbutton"></button>
-
-  <span>
-
-    <button id="upbutton" style=" display: block;"></button>
-
-
-    <button id="downbutton" style=" display: block"></button>
-
-</span>
-
-    <button id="rightbutton"></button>
-</div>
-
-</div>
 
   </aside>
 
+  <footer class="hg__footer"><footer class="page-footer sticky-bottom font-small blue">
 
-  <footer class="hg__footer">
-    <div class="footer-copyright text-center py-3">Github link:
-      <a href="https://github.com/JonesEri07/SpaceBots">JonesEri07</a>
-    </div>
+   <div class="footer-copyright text-center py-3">Github link:
+     <a href="https://github.com/JonesEri07/SpaceBots">JonesEri07</a>
+   </div>
+
+  </footer>
   </footer>
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </body>
+
 </html>
