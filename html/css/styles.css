@@ -77,7 +77,21 @@ html, body {
 }
 
 
+.levels {
+  left: 0;
+}
 
+.squaremain .level1{
+  background-image: url("/images/level1.png");
+}
+
+.squaremain .level2{
+  background-image: url("/images/level2.png");
+}
+
+.squaremain .level3{
+  background-image: url("/images/level3.png");
+}
 
 .button {
   position: relative;
