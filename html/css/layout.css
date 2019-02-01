@@ -1,0 +1,233 @@
+html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+.hg__header { grid-area: header; }
+.hg__footer {
+  position: sticky;
+  bottom: 0;
+  background-color: lightgray;
+  grid-area: footer; }
+.hg__main { grid-area: main; }
+.hg__left { grid-area: score; }
+.hg__right { grid-area: moves; }
+
+
+.score_item
+{
+  background-color: white;
+  font-size: 30px;
+  opacity: 0.5;
+ filter: alpha(opacity=50);
+ text-align: right;
+ float: right;
+
+}
+
+.right_container
+{
+  margin: 0, 50%;
+}
+
+
+.hg {
+
+      background-image: url("/images/gameBG.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+  margin: 0;
+  height: 100%;
+	display: grid;
+	grid-template-areas: "header header header header"
+	                     "score main main moves"
+	                     "footer footer footer footer";
+
+grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: auto
+                      1fr
+                      auto;
+}
+
+@media screen and (max-width: 600px) {
+	.hg {
+    min-height: 1000px;
+		grid-template-areas: "header"
+		                     "score"
+		                     "main"
+		                     "moves"
+		                     "footer";
+		grid-template-columns: 100%;
+		grid-template-rows: auto
+							auto
+							auto
+							auto
+							auto;
+	}
+  .score_item {
+    position: relative;
+    right: 25%;
+  }
+  
+
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  background-color: #fafafa;
+}
+
+.square-container {
+  padding: 8px;
+/*
+    background-image: url("/images/gameBG.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; */
+}
+.square-container:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.square {
+  width: 80%;
+  position: relative;
+  padding-bottom: 80%;
+  min-width: 300px;
+  min-height: 300px;
+  margin: auto;
+}
+
+.square .content {
+  /* width: calc(100% - 16px); */
+  height: calc(100% - 16px);
+  margin: 8px;
+  position: absolute;
+  border-radius: 4px;
+  border: 2px solid white;
+}
+
+.inner-grid-container {
+
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-gap: 1px;
+
+  grid-template-columns: minmax(25px, 75px) minmax(25px, 75px) minmax(25px, 75px) minmax(25px, 75px) minmax(25px, 75px)
+                        minmax(25px, 75px) minmax(25px, 75px) minmax(25px, 75px) minmax(25px, 75px) minmax(25px, 75px);
+
+  justify-content: center;
+}
+
+.inner-grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  font-size: 30px;
+  /* max-height: 75px; */
+  overflow: hidden;
+
+}
+.inner-grid-container > div > span {
+  visibility: hidden;
+}
+
+
+.bt
+{
+  border-top: 4px solid black;
+}
+
+.bb
+{
+  border-bottom: 4px solid black;
+}
+
+.br
+{
+  border-right: 4px solid black;
+}
+
+.bl
+{
+  border-left: 4px solid black;
+}
+
+.home
+{
+  height: 100%;
+  width: 100%;
+  background-color: purple;
+  border-radius: 50%;
+}
+
+.bot
+{
+  height: 90%;
+  width: 90%;
+  margin: 2px;
+}
+
+.red {background-color: red;}
+.blue {background-color: blue;}
+.green {background-color: green;}
+.yellow {background-color: yellow;}
+
+button {
+  border: none;
+  /* color: white; */
+  padding: 20px;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 8px;
+  width: 20%;
+  height: 10%;
+  background: none;
+}
+
+#redbutton {background-color: red;}
+#bluebutton {background-color: blue;}
+#greenbutton {background-color: green;}
+#yellowbutton {background-color: yellow;}
+
+#upbutton {
+  display: block;
+  float: left;
+  width: 0;
+	height: 0;
+	border-left: 25px solid transparent;
+	border-right: 25px solid transparent;
+	border-bottom: 50px solid #555;
+}
+#leftbutton {
+  float: left;
+  width: 0;
+	height: 0;
+	border-top: 25px solid transparent;
+	border-right: 50px solid #555;
+	border-bottom: 25px solid transparent;
+}
+#downbutton {
+  display: block;
+  float: left;
+  width: 0;
+	height: 0;
+	border-left: 25px solid transparent;
+	border-right: 25px solid transparent;
+	border-top: 50px solid #555;
+}
+#rightbutton {
+  float: left;
+  width: 0;
+	height: 0;
+	border-top: 25px solid transparent;
+	border-left: 50px solid #555;
+	border-bottom: 25px solid transparent;
+}
