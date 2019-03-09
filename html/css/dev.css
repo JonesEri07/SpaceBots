@@ -65,3 +65,10 @@ body, html, #root {
 .is-visited {
   background-color: red;
 }
+
+.page-footer
+{
+  position: sticky;
+  bottom: 0;
+  background-color: lightgray;
+}
