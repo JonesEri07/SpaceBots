@@ -46,10 +46,39 @@
 
   <h1 align="center">Space Bots!</h1>
   <h1 align="center">Mini Game</h1>
-  <div id="root">
+  <div id="root" @keydown.esc="closeForm">
+    <transition v-if="showForm" name="modal">
+      <div class="modal-mask">
+        <div class="modal-wrapper">
+          <div class="modal-container">
+
+            <div class="modal-header">
+              <h1 class="modal-title">Register or Login</h1>
+            </div>
+            <div class="modal-body">
+              <p v-if="error" class="error">{{error}}</p>
+              <label>Username</label>
+              <br>
+              <input v-model="username">
+              <br>
+              <label>Password</label>
+              <br>
+              <input type="password" v-model="password">
+            </div>
+            <div class="modal-footer">
+              <button @click="register" type="button">Register</button>
+              <button @click="login" type="button" class="other">Login</button>
+              <button @click="toggleForm" type="button" class="close">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </transition>
       <div align="center">
         <button @click="restart">Restart</button>
       </div>
+      <p v-if="user">Welcome {{user.username}}<br><a href="#" @click="logout">Logout</a></p>
+      <p v-else><a href="#" @click="toggleForm">Register/Login</a></p>
       <div align="center">{{message}}</div>
       <div align="center">{{x_message}}</div>
       <div align="center">{{y_message}}</div>
@@ -66,8 +95,20 @@
         </div>
       </div>
     </div>
-
-
+    <h3>Scores</h3>
+    <div class="score">
+      <table>
+        <tr>
+          <th>Username</th>
+          <th>Best Score</th>
+        </tr>
+        <tr v-for="score in scores">
+          <td>{{score.name}}</td>
+          <td>{{score.score}}</td>
+          <button @click="deleteScore(score)">Delete</button>
+        </tr>
+      </table>
+    </div>
   </div>
 
 
